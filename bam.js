@@ -30,4 +30,9 @@ var display = function () {
             compact: true
         }
     });
+    for (var = i; i < res.length; i++) {
+        table.push([res[i].id, res[i].products.name, res[i].price]);
+    }
+    console.log(table.toString());
+    console.log("");
 }
