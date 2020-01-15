@@ -30,9 +30,27 @@ var display = function () {
             compact: true
         }
     });
-    for (var = i; i < res.length; i++) {
+    for (var i = 0; i < res.length; i++) {
         table.push([res[i].id, res[i].products.name, res[i].price]);
     }
     console.log(table.toString());
     console.log("");
-}
+};
+
+var shopping + function () {
+    inquirer.prompt({
+        name: "productToBuy",
+        type: "input",
+        message: "Enter product Id to purchase"
+    })
+}.then(function (answer) {
+    var selection = answer1 - productToBuy;
+    connection.query("SELECT * FROM products WERE Id=?", selection, function (err, res) {
+        if (err) throw err;
+        if (res.length === 0) {
+            console.log("No such product, use product Id from list above")
+        };
+    })
+})
+
+display();
